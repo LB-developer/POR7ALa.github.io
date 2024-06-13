@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./styles/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My blog</title>
   </head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1>
-    <p>This is the beginning of my website home page.</p>
-    <p>It will eventually contain a list of links to all my blogs.</p>
+    <div class="content-container">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <!-- Use any element to open the sidenav -->
+      <span class="hide-me-please" onclick="openNav()">#</span>
+
+      <div id="navbar">Navbar</div>
+      <div class="main-section-container">
+        <div class="main-header">
+          <h1>Kia ora Taiao! (Hello World!)</h1>
+          <p>This is the beginning of my website home page.</p>
+          <p>It will eventually contain a list of links to all my blogs.</p>
+        </div>
+        <div class="main-content">
+          <a href="blog/te-houtaewa-template.html">
+            <div class="blog-post-1">template blog post</div>
+          </a>
+          <div class="blog-post-2">To be added</div>
+          <div class="blog-post-3">To be added</div>
+          <div class="blog-post-4">To be added</div>
+          <div class="blog-post-5">To be added</div>
+          <div class="blog-post-6">To be added</div>
+          <div class="blog-post-7">To be added</div>
+          <div class="blog-post-8">To be added</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
