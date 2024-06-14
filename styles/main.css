@@ -4,20 +4,15 @@ Mid: #0D21A1
 White: #FFFFFF 
 */
 
+* {
+  font-family: 'Playfair Display', serif;
+}
+
 body {
-  background-color: #a7bed3;
-}
-
-#navbar {
-  background-color: #c6e2e9;
-  width: 20vw;
-  height: 100vh;
-  display: flex;
-  border: solid;
-}
-
-.content-container {
-  display: flex;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#4546f7 0.45px, #e5e5f7 0.45px);
+  background-size: 9px 9px;
 }
 
 .main-section-container {
@@ -27,115 +22,73 @@ body {
 }
 
 .main-header {
-  background-color: #c6e2e9;
-  width: 100%;
-  height: fit-content;
-  padding-left: 2vw;
-  border: solid;
-  border-left: 0;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6vh;
 }
 
-.main-content > a {
-  height: 100%;
+#pelican {
+  width: 10%;
+  border-radius: 50%;
 }
 
-.blog-post-1 {
-  /* height: 40vh; */
+#logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+#github {
+  width: 5%;
+  display: flex;
+  background-color: #e5e5f7;
+}
+
+/* .main-content > a {
+  place-self: center;
+} */
 
 .main-content {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   overflow: visible;
+  justify-content: center;
+  align-items: center;
 }
 
 [class^='blog-post-'] {
-  background-color: #f1ffc4;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 7vh;
+  width: 40vw;
+  min-height: 50vh;
+  max-height: 50vh;
+  margin: 3%;
+  border: solid;
+  border-radius: 10px;
+  border-color: #4546f7;
+  place-self: center;
+}
+
+.blog-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  min-height: 40vh;
-  max-height: 50vh;
-  margin: 3%;
 }
 
-@media only screen and (max-width: 731px) {
-  .main-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    overflow: visible;
-  }
-  [class^='blog-post-'] {
-    width: 95%;
-  }
-  #navbar {
-    display: none;
-  }
-  .main-header {
-    border: solid;
-  }
+.home-text {
+  background-color: #e5e5f7;
+  color: #03033a;
 }
 
-@media only screen and (min-width: 732px) {
-  .hide-me-please {
-    display: none;
-  }
-}
-
-/* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
+.sub-home-text {
+  margin-top: -3vh;
 }
