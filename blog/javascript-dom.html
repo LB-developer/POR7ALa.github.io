@@ -53,21 +53,21 @@
                   <div class="codebox">
                     <p class="codeTextHeader">JavaScript:
                       <p>
-                        <p><span class="codeKeyword">let</span> javascriptButton <span class="codeKeyword">=</span> document.<span class="codeMethod">querySelector</span>(<span class="codeQuote">'#cssJavascriptBtn'</span>)</p>
+                        <p><span class="codeKeyword">let</span> javascriptButton <span class="codeKeyword">=</span> document.<span class="codeMethod">querySelector</span>&shy;(<span class="codeQuote">'#cssJavascriptBtn'</span>)</p>
                         <p><span class="codeKeyword">let</span> btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
                         
-                          <p class="codeFunction">javascriptButton<span class="codeKeyword">.</span><span class="codeMethod">addEventListener</span>(<span class="codeQuote">'click'</span>, () <span class="codeKeyword">=></span> {
+                          <p class="codeFunction">javascriptButton<span class="codeKeyword">.</span><span class="codeMethod">&shy;addEventListener</span>&shy;(<span class="codeQuote">'click'</span>, () <span class="codeKeyword">=></span> {
                         
                           <p class="codeFunctionCode codeComment">// add one to click counter</p>
                           <p class="codeFunctionCode">btnClickCounter<span class="codeKeyword">++</span></p>
-                          <p class="codeFunctionCode codeComment">// if the button has been clicked three times</p>
+                          <p class="codeFunctionCode codeComment">// if the button has been clicked three times execute the following</p>
                           <p class="codeFunctionCode"><span class="codeKeyword">if</span> (btnClickCounter <span class="codeKeyword">===</span> <span class="codeNumber">3</span>) {</p>
-                            <p class="codeFunctionCode codeComment">// reset click counter</p>
-                            <p class="codeFunctionCode">btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
-                            <p class="codeFunctionCode codeComment">// add random colour to javascriptButton</p>
-                            <p class="codeFunctionCode">javascriptButton<span class="codeKeyword">.</span>style<span class="codeKeyword">.</span>backgroundColor <span class="codeKeyword">=</span></p>
-                              <p class="codeFunctionCode"><span class="codeQuote">'#'</span> + Math<span class="codeKeyword">.</span><span class="codeMethod">floor</span>(Math<span class="codeKeyword">.</span><span class="codeMethod">random</span>() * <span class="codeNumber">16777215</span>)<span class="codeKeyword">.</span>toString(<span class="codeNumber">16</span>)</p>
-                          <p class="codeFunctionCode">}</p>
+                            <p class="codeNestedFunctionCode codeComment">// reset click counter</p>
+                            <p class="codeNestedFunctionCode">btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
+                            <p class="codeNestedFunctionCode codeComment">// add random colour to javascriptButton</p>
+                            <p class="codeNestedFunctionCode">javascriptButton<span class="codeKeyword">&shy;.</span>style<span class="codeKeyword">. </span>backgroundColor <span class="codeKeyword">=</span></p>
+                              <p class="codeNestedFunctionCode"><span class="codeQuote">'#'</span> + Math<span class="codeKeyword">.</span><span class="codeMethod">floor</span>(Math<span class="codeKeyword">.</span><span class="codeMethod">random</span>() * <span class="codeNumber">16777215</span>)<span class="codeKeyword">.</span>toString(<span class="codeNumber">16</span>)</p>
+                                                      <p class="codeFunctionCode">}</p>
                         </p>
                         <p>})</p>
                       </p>

@@ -314,7 +314,7 @@ body {
   }
   .blog-header {
     padding-left: 0.4em;
-    font-size: 15vw;
+    font-size: 14vw;
   }
 }
 
@@ -325,10 +325,15 @@ body {
 
 .codeFunction {
   display: inline-block;
+  word-break: break-all;
 }
 
 .codeFunctionCode {
   margin-left: 2vw;
+}
+
+.codeNestedFunctionCode {
+  margin-left: 4vw;
 }
 
 .blog-sub-paragraph:has( > button) {
@@ -357,6 +362,7 @@ body {
 
 .codeKeyword {
   color: #ffab5c;
+  word-break: break-all;
 }
 
 .codeMethod {
