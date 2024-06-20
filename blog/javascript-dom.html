@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>JS & HTML+CSS</title>
+    <script src="../scripts/main.js" defer></script>
+
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-items">
+        <a href="../index.html">Home</a>
+        <div class="hover-box"></div>
+      </div>
+    </div>
+    <div class="blog-container">
+      <div ><h1 class="blog-header"><b class="jsHeader">JavaScript</b> Fundamentals</h1></div>
+      <div class="blog-content">
+          <h2><em>HTML & CSS + JavaScript</em></h2>
+
+          <p>
+            Combining only HTML & CSS creates a *static* web-page, there is a structure (HTML) and styling (CSS), but these two things alone are quite limited even though things can feel interactive i.e. A button changing colour on hover (:hover in CSS), but what if you wanted to change the buttons colour after every 3 clicks? With just HTML & CSS this is not possible and thus one of the many limiting factors that static web-pages possess, so how do we fix it? We need what's called a <b>scripting language</b>.
+            </p>
+            <p>
+            A scripting language is used to introduce interactive elements to static web-pages to make them dynamic web-pages. The most commonly used scripting language is JavaScript (JS). 
+          <p>
+          <h3 class="blog-sub-heading">What does that look like under the hood?</h3>
+          <p class="blog-sub-paragraph">
+            Let's use the previous example of button hover and clicking three times in an example below
+          </p>
+          <div class="codeExampleContainer">
+            <p class="blog-sub-paragraph"><em>Try hovering the "CSS Only" button, and then clicking the "JS + CSS" three times</em></p>
+            <div class="codeExampleHeader">
+              <p class="blog-sub-paragraph">
+                <button id="cssOnlyBtn" type="button">CSS Only</button>
+                <button id="cssJavascriptBtn" type="button">CSS + JS</button>
+              </p>
+            <p class="blog-sub-paragraph">While CSS is a very powerful tool, it has it's limitations; if we were to attempt making the second button in CSS, we would find that CSS is unable to keep a count of how many times a button is pressed and thus the second button is not possible through CSS alone.</p>
+            <p class="blog-sub-paragraph">Increased capacity, however, also comes with increased complexity. Below you will see the difference in code I've used to generate the styling of each button.</p>
+
+            </div>
+              <div class="codeExampleContent">
+                <div class="codebox">
+                  <div class="codebox">
+                    <p class="codeTextHeader">CSS:
+                      <p>#cssOnlyBtn:hover {
+                        background-color: #6bb679;
+                      }</p>
+                    </p>
+                  </div>
+                  <div class="codebox">
+                    <p class="codeTextHeader">JavaScript:
+                      <p>
+                        <p><span class="codeKeyword">let</span> javascriptButton <span class="codeKeyword">=</span> document.<span class="codeMethod">querySelector</span>(<span class="codeQuote">'#cssJavascriptBtn'</span>)</p>
+                        <p><span class="codeKeyword">let</span> btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
+                        
+                          <p class="codeFunction">javascriptButton<span class="codeKeyword">.</span><span class="codeMethod">addEventListener</span>(<span class="codeQuote">'click'</span>, () <span class="codeKeyword">=></span> {
+                        
+                          <p class="codeFunctionCode codeComment">// add one to click counter</p>
+                          <p class="codeFunctionCode">btnClickCounter<span class="codeKeyword">++</span></p>
+                          <p class="codeFunctionCode codeComment">// if the button has been clicked three times</p>
+                          <p class="codeFunctionCode"><span class="codeKeyword">if</span> (btnClickCounter <span class="codeKeyword">===</span> <span class="codeNumber">3</span>) {</p>
+                            <p class="codeFunctionCode codeComment">// reset click counter</p>
+                            <p class="codeFunctionCode">btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
+                            <p class="codeFunctionCode codeComment">// add random colour to javascriptButton</p>
+                            <p class="codeFunctionCode">javascriptButton<span class="codeKeyword">.</span>style<span class="codeKeyword">.</span>backgroundColor <span class="codeKeyword">=</span></p>
+                              <p class="codeFunctionCode"><span class="codeQuote">'#'</span> + Math<span class="codeKeyword">.</span><span class="codeMethod">floor</span>(Math<span class="codeKeyword">.</span><span class="codeMethod">random</span>() * <span class="codeNumber">16777215</span>)<span class="codeKeyword">.</span>toString(<span class="codeNumber">16</span>)</p>
+                          <p class="codeFunctionCode">}</p>
+                        </p>
+                        <p>})</p>
+                      </p>
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <h2><em>Sub-heading 2</em></h2>
+          
+          <p class="blog-sub-paragraph">
+          Omnis libero et perferendis quis. Quas suscipit maiores libero. In nisi earum placeat perspiciatis quia. Ratione voluptatum et sapiente. Dolores ea ut dolorem reiciendis vero ut unde sed.
+          </p>
+          <p class="blog-sub-paragraph">
+            Quisquam autem quisquam sit. In ut rerum ducimus magni dicta doloribus et distinctio. Aut repudiandae corporis et sed quasi dolores et iure. Doloremque repellendus dolor dolorem dolore beatae et earum similique.
+          </p>
+          <h3 class="blog-sub-heading">Sub-sub-heading</h3>
+
+          <p class="blog-sub-paragraph">Distinctio molestiae omnis est voluptatem aut consequatur. Eligendi omnis libero earum neque ea. Nihil iusto minima adipisci aut. Reiciendis autem et quia consequuntur rerum. Dolores non blanditiis similique et.
+          </p>
+
+          <p class="blog-sub-paragraph">Omnis nobis ut dolor quibusdam voluptatem sunt. Aut debitis qui omnis molestiae voluptas totam. Eveniet saepe veniam placeat aliquam. Et ut incidunt voluptates animi quam. Est nam assumenda assumenda aut eum est aliquam iste. Et quasi qui blanditiis eos et illum occaecati deserunt</p>
+
+
+          <h2><em>Sub-heading 3</em></h2>
+
+          <p>Corporis odio provident rerum. Voluptas eius occaecati esse. Iure facilis ipsum sed eius maxime. Ut ut vero autem adipisci ullam. Aperiam officiis aut delectus atque repellendus ducimus in.
+          </p>
+
+          <h2><em>Sub-heading 4</em></h2>
+
+          <p>Omnis libero et perferendis quis. Quas suscipit maiores libero. In nisi earum placeat perspiciatis quia. Ratione voluptatum et sapiente. Dolores ea ut dolorem reiciendis vero ut unde sed.
+          </p>
+
+          <h2><em>Sub-heading 5</em></h2>
+
+          <p>Quisquam autem quisquam sit. In ut rerum ducimus magni dicta doloribus et distinctio. Aut repudiandae corporis et sed quasi dolores et iure. Doloremque repellendus dolor dolorem dolore beatae et earum similique.</p>
+      </div>
+
+
+
+</body>
+</html>

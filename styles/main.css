@@ -113,7 +113,7 @@ body {
   color: #03033a;
   font-size: 5em;
   font-weight: 600;
-  width: fit-content;
+
   padding-left: 0.5em;
   margin: 0;
 }
@@ -228,6 +228,10 @@ body {
   background-color: #6bb679;
 }
 
+.jsHeader {
+  background-color: #F7DF1E;
+}
+
 .content-highlight {
   background-color: #45a7f7;
 }
@@ -261,4 +265,104 @@ body {
     margin-top: 1em;
     margin-left: 1em;
   }
+}
+
+.codebox {
+  display: flex;
+  border:2px solid black;
+  background-color:rgb(30, 30, 30);
+  max-width: 100%;
+  color: white;
+  width: fit-content;
+  overflow:auto;    
+  padding:10px;
+  border-radius: 2%;
+}
+
+.codebox > .codebox {
+  display: inline-block;
+  padding: 2vw;
+  margin: 1vw;
+}
+
+.codeTextHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.codeExampleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.codeExampleHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.codeExampleContent {
+  width: 100%;
+}
+
+@media only screen and (max-width: 670px) {
+  .codebox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-header {
+    padding-left: 0.4em;
+    font-size: 15vw;
+  }
+}
+
+/* margin box model example doesnt shrink below 337px */
+/* @media only screen and (max-width: 337px) {
+
+} */
+
+.codeFunction {
+  display: inline-block;
+}
+
+.codeFunctionCode {
+  margin-left: 2vw;
+}
+
+.blog-sub-paragraph:has( > button) {
+  border-left: 0;
+  /* padding-left: 0; */
+  margin-left: 0;
+}
+
+.blog-sub-paragraph > button {
+  width: 20vw;
+  height: 20vh;
+
+}
+
+#cssOnlyBtn:hover {
+  background-color: #6bb679;
+}
+
+.codeComment {
+  color: rgba(255, 255, 255, 0.51);
+}
+
+.codeNumber {
+  color: #b5bdff;
+}
+
+.codeKeyword {
+  color: #ffab5c;
+}
+
+.codeMethod {
+  color: #ffd173;
+}
+
+.codeQuote {
+  color: #d5ff80;
 }
