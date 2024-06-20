@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/main.css" />
+    
     <title>JS & HTML+CSS</title>
     <script src="../scripts/main.js" defer></script>
 
@@ -21,11 +22,12 @@
           <h2><em>HTML & CSS + JavaScript</em></h2>
 
           <p>
-            Combining only HTML & CSS creates a *static* web-page, there is a structure (HTML) and styling (CSS), but these two things alone are quite limited even though things can feel interactive i.e. A button changing colour on hover (:hover in CSS), but what if you wanted to change the buttons colour after every 3 clicks? With just HTML & CSS this is not possible and thus one of the many limiting factors that static web-pages possess, so how do we fix it? We need what's called a <b>scripting language</b>.
+            Combining only HTML & CSS creates a *static* web-page, there is a structure (HTML) and styling (CSS), but these two things alone are quite limited even though things can feel interactive i.e. A button changing colour on hover (:hover in CSS), but what if you wanted to change the buttons colour after every 3 clicks? With just HTML & CSS this is not possible, and thus an example of one of the many limiting factors that static web-pages possess, so how do we fix this limitation? We need what's called a <b>scripting language</b>.
             </p>
             <p>
-            A scripting language is used to introduce interactive elements to static web-pages to make them dynamic web-pages. The most commonly used scripting language is JavaScript (JS). 
+            A scripting language is used to introduce interactive elements to static web-pages to make them dynamic. The most commonly used scripting language is JavaScript (JS). 
           <p>
+            <p >To use an analogy, think of a regular old fence. The posts are the structure (HTML), the paint is the styling (CSS), and the motion sensors which open the gate when someone gets close to the fence is the dynamic interaction (JavaScript).</p>
           <h3 class="blog-sub-heading">What does that look like under the hood?</h3>
           <p class="blog-sub-paragraph">
             Let's use the previous example of button hover and clicking three times in an example below
@@ -38,8 +40,8 @@
                 <button id="cssJavascriptBtn" type="button">CSS + JS</button>
               </p>
             <p class="blog-sub-paragraph">While CSS is a very powerful tool, it has it's limitations; if we were to attempt making the second button in CSS, we would find that CSS is unable to keep a count of how many times a button is pressed and thus the second button is not possible through CSS alone.</p>
-            <p class="blog-sub-paragraph">Increased capacity, however, also comes with increased complexity. Below you will see the difference in code I've used to generate the styling of each button.</p>
-
+            
+            <p class="blog-sub-paragraph">Increased capacity, however, also comes with increased complexity. Below you will see the difference in code (<em>Though not the most optimal</em>) I've used to generate the styling of each button.</p>
             </div>
               <div class="codeExampleContent">
                 <div class="codebox">
@@ -53,10 +55,14 @@
                   <div class="codebox">
                     <p class="codeTextHeader">JavaScript:
                       <p>
+                        <p class="codeComment">// target the CSS + JS button</p>
                         <p><span class="codeKeyword">let</span> javascriptButton <span class="codeKeyword">=</span> document.<span class="codeMethod">querySelector</span>&shy;(<span class="codeQuote">'#cssJavascriptBtn'</span>)</p>
+                        <p class="codeComment">// create a variable that stores how many times the button has been clicked</p>
                         <p><span class="codeKeyword">let</span> btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
-                        
-                          <p class="codeFunction">javascriptButton<span class="codeKeyword">.</span><span class="codeMethod">&shy;addEventListener</span>&shy;(<span class="codeQuote">'click'</span>, () <span class="codeKeyword">=></span> {
+                        <p>
+                          <p class="codeComment ">// when the button is clicked execute the curly brackets</p>
+                          <p >javascriptButton<span class="codeKeyword">.</span><span class="codeMethod">&shy;addEventListener</span>&shy;(<span class="codeQuote">'click'</span>, () <span class="codeKeyword">=></span> {
+                        </p>
                         
                           <p class="codeFunctionCode codeComment">// add one to click counter</p>
                           <p class="codeFunctionCode">btnClickCounter<span class="codeKeyword">++</span></p>
@@ -64,7 +70,7 @@
                           <p class="codeFunctionCode"><span class="codeKeyword">if</span> (btnClickCounter <span class="codeKeyword">===</span> <span class="codeNumber">3</span>) {</p>
                             <p class="codeNestedFunctionCode codeComment">// reset click counter</p>
                             <p class="codeNestedFunctionCode">btnClickCounter <span class="codeKeyword">=</span> <span class="codeNumber">0</span></p>
-                            <p class="codeNestedFunctionCode codeComment">// add random colour to javascriptButton</p>
+                            <p class="codeNestedFunctionCode codeComment">// generate and add random colour to javascriptButton</p>
                             <p class="codeNestedFunctionCode">javascriptButton<span class="codeKeyword">&shy;.</span>style<span class="codeKeyword">. </span>backgroundColor <span class="codeKeyword">=</span></p>
                               <p class="codeNestedFunctionCode"><span class="codeQuote">'#'</span> + Math<span class="codeKeyword">.</span><span class="codeMethod">floor</span>(Math<span class="codeKeyword">.</span><span class="codeMethod">random</span>() * <span class="codeNumber">16777215</span>)<span class="codeKeyword">.</span>toString(<span class="codeNumber">16</span>)</p>
                                                       <p class="codeFunctionCode">}</p>
@@ -78,35 +84,53 @@
               </div>
           </div>
 
-          <h2><em>Sub-heading 2</em></h2>
+          <h2><em>Control Flow & Loops</em></h2>
           
           <p class="blog-sub-paragraph">
-          Omnis libero et perferendis quis. Quas suscipit maiores libero. In nisi earum placeat perspiciatis quia. Ratione voluptatum et sapiente. Dolores ea ut dolorem reiciendis vero ut unde sed.
+          Control flow just means the order in which things are executed; putting your socks on before your shoes, is an example of a control flow.<br>
+          <br>
+            The two most important control flows are conditional statements, and, loops.
+          <br>
+          <br>
+            A <b>conditional statement</b> asks if a condition is true and <em>then</em> executes a block of code.
+          <br>
+          A <b>loop</b> executes a block of code <em>until</em> a condition is true.<br>
+          <br>
+          Two of the easiest control flows to follow when unfamiliar with programming are an <em><b>if</b></em> statement and a <em><b>while</b> loop</em>.
+          <br>
+          An if statement just asks if something inside the parenthesis <span class="codeBracketOne">( )</span> is true, then execute what is in the curly braces <span class="codeBracketOne">{ }</span>, if the statement is not true it moves on without executing anything unless specified do so.
+        </p>
+          <br>
+          <em>Let's use our shoes and socks example to show these control flow can be executed in programming.</em>
+          <br>
+          
           </p>
-          <p class="blog-sub-paragraph">
-            Quisquam autem quisquam sit. In ut rerum ducimus magni dicta doloribus et distinctio. Aut repudiandae corporis et sed quasi dolores et iure. Doloremque repellendus dolor dolorem dolore beatae et earum similique.
-          </p>
-          <h3 class="blog-sub-heading">Sub-sub-heading</h3>
-
-          <p class="blog-sub-paragraph">Distinctio molestiae omnis est voluptatem aut consequatur. Eligendi omnis libero earum neque ea. Nihil iusto minima adipisci aut. Reiciendis autem et quia consequuntur rerum. Dolores non blanditiis similique et.
-          </p>
-
-          <p class="blog-sub-paragraph">Omnis nobis ut dolor quibusdam voluptatem sunt. Aut debitis qui omnis molestiae voluptas totam. Eveniet saepe veniam placeat aliquam. Et ut incidunt voluptates animi quam. Est nam assumenda assumenda aut eum est aliquam iste. Et quasi qui blanditiis eos et illum occaecati deserunt</p>
-
-
-          <h2><em>Sub-heading 3</em></h2>
-
-          <p>Corporis odio provident rerum. Voluptas eius occaecati esse. Iure facilis ipsum sed eius maxime. Ut ut vero autem adipisci ullam. Aperiam officiis aut delectus atque repellendus ducimus in.
-          </p>
-
-          <h2><em>Sub-heading 4</em></h2>
-
-          <p>Omnis libero et perferendis quis. Quas suscipit maiores libero. In nisi earum placeat perspiciatis quia. Ratione voluptatum et sapiente. Dolores ea ut dolorem reiciendis vero ut unde sed.
+          <div class="codebox">
+            <div class="codebox">
+                <span class="codeKeyword">if</span> <span class="codeBracketOne">(</span>socks are on<span class="codeBracketOne">)</span> <span class="codeBracketOne">{</span> <br>
+                  put shoes on <br>
+                <span class="codeBracketOne">}</span>
+            </div>
+            <div class="codebox">
+              <span class="codeKeyword">while</span> <span class="codeBracketOne">(</span>socks aren't on<span class="codeBracketOne">)</span> <span class="codeBracketOne">{</span> <br>
+                don't put shoes on <br>
+              <span class="codeBracketOne">}</span> <span class="codeKeyword"><em>else</em></span> 
+              put shoes on
+            </div>
+          </div>
+          <p>
+            As you can see, we can use these different types of control flows to check whether our task is complete, as to which use is 'correct' depends on the question and implementation.
           </p>
 
-          <h2><em>Sub-heading 5</em></h2>
+          <h2><em>Functions</em></h2>
 
-          <p>Quisquam autem quisquam sit. In ut rerum ducimus magni dicta doloribus et distinctio. Aut repudiandae corporis et sed quasi dolores et iure. Doloremque repellendus dolor dolorem dolore beatae et earum similique.</p>
+          <p class="blog-sub-paragraph">A function is a pre-defined block of code that can be called on with its given name.
+            <br>
+            <br>
+          To understand why this is useful, look back at the JavaScript code for the button above. Imagine we want to add that three click functionality to another button; should we copy and paste all those lines of code and change our variables to target our new button, or, should we wrap our original code in a function that automatically applies the functionality to whatever button name you pass through? This is the power of functions, the necessity for repetition in programming calls for simplification, which functions provide.
+          </p>
+
+          
       </div>
 
 
