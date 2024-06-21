@@ -98,6 +98,24 @@ javascriptButton­.style. backgroundColor =
                 </div>
               </div>
           
+          <h2><em>The DOM</em></h2>
+          <p class="blog-sub-paragraph">When applying JavaScript to a web-page we only manipulate the underlying HTML and CSS indirectly. Our web-browsers help us target the elements on a web-page by converting all of the elements to objects that can be manipulated by scripting languages, like JavaScript. Without the DOM we wouldn't be able to interact with, and, dynamically update the content and structure of the web page as easily or efficiently; the collective of all objects in a web-page is known as the Document Object Model or the DOM.
+
+          
+            <br>
+            <br>
+          You can see an example of using JavaScript to interact with the DOM by using a line from the code above:
+          <br>
+          <br>
+          <em>"<b>document</b>.querySelector­('#cssJavascriptBtn')"</em>
+          <br>
+          <br>
+          The line basically says find an element with the id(#) 'cssJavascriptBtn'
+           
+
+          </p>
+          
+          
 
           <h2><em>Control Flow & Loops</em></h2>
           
@@ -113,14 +131,14 @@ javascriptButton­.style. backgroundColor =
           <br>
           Two of the easiest control flows to follow when unfamiliar with programming are an <em><b>if</b></em> statement and a <em><b>while</b> loop</em>.
           <br>
-          An if statement just asks if something inside the parenthesis <span class="codeBracketOne">( )</span> is true, then execute what is in the curly braces <span class="codeBracketOne">{ }</span>, if the statement is not true it moves on without executing anything unless specified do so.
+          An if statement just asks if something inside the parenthesis <span class="codeBracketOne">( )</span> is true, then execute what is in the curly braces <span class="codeBracketOne">{ }</span>, if the statement is not true it moves on without executing anything unless specified to do so with an else or else if statment.
         </p>
           <br>
-          <em>Let's use our shoes and socks example to show these control flow can be executed in programming.</em>
+          <em>Let's use our shoes and socks example to show these control flow can be executed in JavaScript.</em>
           <br>
           
           </p>
-          <div class="codebox">
+          
             <div>
                 <pre><code class="language-javascript">if (socks are on) {
 put shoes on
@@ -133,11 +151,31 @@ don't put shoes on
 } else { put shoes on }
 </code></pre>
           </div>
-          </div>
+          
           <p>
             As you can see, we can use these different types of control flows to check whether our task is complete, as to which use is 'correct' depends on the question and implementation.
           </p>
+          
+          <h2><em>Arrays & Objects</em></h2>
+          <p class="blog-sub-paragraph">Arrays and objects are similar in the fact that they are both containers of data that are iterable & changeable, let's look at an example to understand how they differ.
+          </p> 
+          <pre><code class="language-javascript">
+let array = [1, 2, 3, 4, 5]
 
+let car = {
+  year: '2006',
+  colour: 'blue',
+  wheels: 4
+}
+          </code></pre>
+          <p class="blog-sub-paragraph">
+          Notice that how they differ is how they hold their data. The array offers a simple list of values, while an object offers a named set of key value pairs.  
+          <br>
+          <br>
+          Their uses also differ greatly as you can imagine, if I wanted to hold the numbers 1 - 5, I could create 5 objects with a key:value pairs, or more efficiently create an array as I have done above.
+
+          Similarly, if I wanted to store information about my car, it wouldn't be practical to make 5 separate arrays for each piece of information. Instead, I would use an object to store the related data in key:value pairs, where each key represents a different attribute of the car.
+          </p>
           <h2><em>Functions</em></h2>
 
           <p class="blog-sub-paragraph">A function is a pre-defined block of code that can be called on with its given name.
@@ -145,7 +183,17 @@ don't put shoes on
             <br>
           To understand why this is useful, look back at the JavaScript code for the button above. Imagine we want to add that three click functionality to another button; should we copy and paste all those lines of code and change our variables to target our new button, or, should we wrap our original code in a function that automatically applies the functionality to whatever button name you pass through? This is the power of functions, the necessity for repetition in programming calls for simplification, which functions provide.
           </p>
+          
+            <pre><code class="language-javascript">   
+  // making the function
+  function helloWorld() {
+  console.log('Hello World!')
+  }
 
+  // asking the function to run
+  helloWorld()
+            </code></pre>
+          
           
       </div>
     </div>
