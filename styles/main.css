@@ -76,7 +76,27 @@ body {
   border-radius: 10px;
   border-color: #4546f7;
   place-self: center;
+  
 }
+
+[class^='blog-post-']::before {
+  
+}
+
+[class^='blog-post-']:hover {
+  transition: transform 1s ease;
+  transition: box-shadow 0.8s ease;
+  transform: scale(1.05);
+}
+
+
+.blog-post-2:hover {
+  box-shadow: 0 0 0 12px #b68741,
+              0 0 0 12px inset #6bb679;
+  border-width: 6px;
+  border-color: #edc180
+}
+
 
 .blog-link {
   display: flex;
@@ -360,5 +380,4 @@ body {
 .codeBracketOne {
   color: #ff0000;
 }
-
 
