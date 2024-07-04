@@ -79,10 +79,6 @@ body {
   
 }
 
-[class^='blog-post-']::before {
-  
-}
-
 [class^='blog-post-']:hover {
   transition: transform 1s ease;
   transition: box-shadow 0.8s ease;
